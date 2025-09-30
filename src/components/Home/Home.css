@@ -10,7 +10,7 @@
 /* Speedy Font */
 @font-face {
   font-family: 'Speedy';
-  src: url('../../assets/fonts/SpeedyRegular-7BLoE.ttf') format('truetype');
+  src: url('/public/SpeedyRegular-7BLoE.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   }

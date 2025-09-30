@@ -183,7 +183,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             transition={{ delay: 1.2, duration: 1.5, ease: "easeOut" }}
           >
             <motion.img 
-              src="/assets/images/as2.png" 
+              src="/public/as2.png" 
               alt="NASA Astronaut in Space"
               className="astronaut-image"
               animate={{ 
@@ -205,7 +205,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             transition={{ delay: 1.8, duration: 1.2, ease: "easeOut" }}
           >
             <motion.img 
-              src="/assets/images/nyzk.png" 
+              src="/public/nyzk.png" 
               alt="Asteroid Impact Visualization"
               className="asteroid-image"
               animate={{ 
