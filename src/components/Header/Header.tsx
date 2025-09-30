@@ -28,7 +28,7 @@ function Header() {
         >
           <div className="logo">
             <img 
-              src="/public/nasa-logo.svg" 
+              src="/images/nasa-logo.svg" 
               alt="NASA AS25 - Asteroid Impact Visualization System" 
               className="logo-svg"
               width="60"
