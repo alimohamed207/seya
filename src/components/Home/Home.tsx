@@ -317,7 +317,52 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </div>
           </div>
         </div>
-
+        
+        {/* Space Exploration Section */}
+        <div className="subsection space-exploration-subsection">
+          <div className="section-header">
+            <div className="section-icon-container">
+              <svg className="section-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+              <h2 className="section-title">Prediction Model</h2>
+              <div className="section-divider"></div>
+            </div>
+          </div>
+          
+          <div className="exploration-content">
+            <div className="exploration-text">
+              <h3>Impact Prediction Model</h3>
+              <p>
+                Explore our machine learning model for predicting asteroid impacts and their potential effects. 
+                This interactive notebook provides detailed analysis and visualizations of impact scenarios based on NASA data.
+              </p>
+              <motion.a
+                href="https://colab.research.google.com/drive/1pNKaARmAOGraA6BK0PtycAVyfyK8V2DK#scrollTo=vTJtmFCc6bQ0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="explore-button"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                🚀 Open Impact Prediction Model
+              </motion.a>
+            </div>
+            <div className="exploration-visual">
+              <div className="planet-orbit">
+                <div className="planet asteroid"></div>
+              </div>
+              <div className="impact-prediction-visual">
+                <div className="impact-wave"></div>
+                <div className="impact-wave delay-1"></div>
+                <div className="impact-wave delay-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         {/* Meteor Threat History Subsection */}
         <div className="subsection meteor-history-subsection">
           <h3>Meteor Threat History</h3>
