@@ -1,3 +1,12 @@
+@import url('./styles/fonts.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply Speedy font to all text elements */
+body, input, button, textarea, select, option {
+  font-family: 'Speedy', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
