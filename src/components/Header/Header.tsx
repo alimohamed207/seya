@@ -47,7 +47,7 @@ function Header() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span className="mode-label">User Mode:</span>
+          <span className="mode-label">Tools Made For :</span>
           <div className="mode-buttons">
             {userModes.map((mode) => {
               const IconComponent = mode.icon;

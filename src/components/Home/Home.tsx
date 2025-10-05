@@ -6,7 +6,9 @@ import {
   Target, 
   Shield, 
   BarChart3,
-  ArrowRight
+  ArrowRight,
+  Users,
+  BookOpen
 } from 'lucide-react';
 import './Home.css';
 
@@ -383,6 +385,62 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <p className="citation">Source: NASA Asteroid and Comet Watch - nasa.gov</p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* About the Challenge Section */}
+      <motion.section 
+        id="about-challenge"
+        className="about-challenge-section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="section-header">
+          <BookOpen className="section-icon" size={32} />
+          <h2 className="section-title">About the Challenge</h2>
+          <div className="section-divider"></div>
+        </div>
+        
+        <div className="glass-panel">
+          <h3 className="challenge-title">Meatr Madness</h3>
+          <p className="challenge-description">
+            A newly identified near-Earth asteroid, "Impactor-2025," poses a potential threat to Earth, but do we have the tools to enable the public and decision makers to understand and mitigate its risks? NASA datasets include information about known asteroids and the United States Geological Survey provides critical information that could enable modeling the effects of asteroid impacts, but this data needs to be integrated to enable effective visualization and decision making. Your challenge is to develop an interactive visualization and simulation tool that uses real data to help users model asteroid impact scenarios, predict consequences, and evaluate potential mitigation strategies.
+          </p>
+        </div>
+
+        <div className="meet-team-section">
+          <div className="section-header">
+            <Users className="section-icon" size={32} />
+            <h2 className="section-title">Meet the Team</h2>
+            <div className="section-divider"></div>
+          </div>
+          
+          <div className="team-grid">
+            {[
+              { name: 'Ali Mohamed Eid', role: 'Fullstack Web Developer', description: 'Specializes in React and interactive visualizations' },
+              { name: 'Alzahraa Abdullah Mohamed', role: 'Data Analyst', description: 'Expert in NASA datasets and impact modeling' },
+              { name: 'Nourseen Magdy Helmy', role: 'Graphic Designer', description: 'Handles UI/UX and Graphic Design' },
+            ].map((member, index) => (
+              <motion.div 
+                key={index}
+                className="team-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -5, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)' }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="team-avatar">
+                  {member.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <h3 className="team-member-name">{member.name}</h3>
+                <p className="team-member-role">{member.role}</p>
+                <p className="team-member-desc">{member.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.section>
